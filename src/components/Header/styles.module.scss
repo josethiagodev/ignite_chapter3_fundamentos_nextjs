@@ -1,0 +1,33 @@
+.header {
+  height: auto;
+  border-bottom: 1px solid var(--gray-700);
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  nav { width: auto; height: 5rem; }
+  a { 
+    display: inline-block; 
+    position: relative; 
+    width: auto; 
+    height: 5rem; 
+    line-height: 5rem; 
+    margin: 0 1rem; 
+    padding: 0 0.5rem; 
+    color: var(--gray-300); 
+    transition: color 0.2s; 
+    font-weight: 600;
+
+    & + a { margin-left: 0.5rem; }
+    &:hover { color: var(--cyan-500); }
+    &:active { color: var(--cyan-500); font-weight: bold; }
+    &.active::after { content: ''; position: absolute; bottom: 1px; left: 0; width: 100%; height: 3px; background: var(--cyan-500); border-radius: 3px 3px 0 0; }
+  }
+}
